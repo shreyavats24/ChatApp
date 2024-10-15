@@ -1,0 +1,42 @@
+<!-- <h1>Login</h1>
+<% if(typeof message !== 'undefined'){%>
+    <h4 style="color: red;"><%= message%></h4>
+<% } %>  
+<form action="/" method="post">
+    Email:
+    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+    <br><br>
+    Password:
+    <input type="password" name="password" id="password" placeholder="Enter password" required>
+    <br><br>
+    <input type="submit" value="Login">
+</form>   -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chat App - Login</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <% if(typeof message !== 'undefined'){%>
+            <h4 class="error-message"><%= message %></h4>
+        <% } %>  
+        <form action="/" method="post" class="login-form">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter password" required>
+            
+            <input type="submit" value="Login" class="btn-submit">
+        </form>
+        <p>Don't have an account? <a href="/register">Sign Up</a></p>
+    </div>
+</body>
+</html>
